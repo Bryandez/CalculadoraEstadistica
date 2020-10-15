@@ -4,20 +4,26 @@
 #include<math.h>
 
 //prototipos de funciones
-int MediaAritmetica(int x[]);
-int MediaGeometrica(int x[]);
-int MediaArmonica(int x[]); 
-int Mediana(int x[]);
-int Moda(int x[]);
-int Rango(int x[]);
-int DesviacionEstandar(int x[]);
-int Varianza(int x[]); 
+float MediaAritmetica(int x[], int n);
+float MediaGeometrica(int x[], int n);
+float MediaArmonica(int x[], int n); 
+int Mediana(int x[], int n);
+int Moda(int x[], int n);
+int Rango(int x[], int n);
+float Varianza(int x[], int n, int a); 
+float DesviacionEstandar(int x);
 
 //programa principal
 int main(){
     //bloque de declarativas
     int n = 1;
     int serie[n];
+    float mA, mG, mAr, dE, va; 
+    int me, mo, ra, opt;
+
+    //bloque de instrucciones
+    printf("\t\tCALCULADORA ESTAD%CSTICA", 161);
+    printf("\n\n");
 
     
 
@@ -26,37 +32,66 @@ int main(){
 }
 
 //definición de funciones
-int MediaAritmetica(int x[]){
-  int a;
-  for () {
-    
+float MediaAritmetica(int x[], int n){
+  float a = 0;
+  for (int i = 0; i < n; i++) {
+    a += (x[i]/n);
   }
+  return a;
 }
 
-int MediaGeometrica(int x[]){
+float MediaGeometrica(int x[], int n){
+  float a = 1;
+  for (int i = 0; i < n; i++) {
+    a *= pow(x[i], (1/n))
+  }
+  return a;
+}
+
+float MediaArmonica(int x[], int n){
+    float su = 0;
+    float div, b;
+    n = n1;
+    for (int i = 0; i<= n; i++ ){
+        div = 1 / x[i];
+        su = su + div;
+    }
+    b = n1/su;
+    return b;
+}
+
+int Mediana(int x[], int n){
+    int a;
+    for (int i = 0; i<= n; i++ ){
+         for (int i = 0; i<= n; i++ )
+            if (x[i] > x[i+1]){
+                a = x[i+1];
+         }
+    }
 
 }
 
-int MediaArmonica(int x[]){
+int Moda(int x[], int n){
+    int moda = 0;
+    
+}
+
+int Rango(int x[], int n){
 
 }
 
-int Mediana(int x[]){
-
+float Varianza(int x[], int n, int a){
+    float v=0;
+    float re;
+    for (int i = 0; i < n; i++){
+        v += pow((x[i]-a), 2);
+    }
+    re = v/n;
+    return re;
 }
 
-int Moda(int x[]){
-
-}
-
-int Rango(int x[]){
-
-}
-
-int DesviacionEstandar(int x[]){
-
-}
-
-int Varianza(int x[]){
-
+float DesviacionEstandar(int x){
+    float d;
+    d = sqrt(x);
+    return d;
 }

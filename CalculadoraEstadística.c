@@ -63,9 +63,10 @@ float MediaArmonica(int x[], int n){
 int Mediana(int x[], int n){
     int a;
     for (int i = 0; i<= n; i++ ){
-         for (int i = 0; i<= n; i++ )
+         for (int y = 0; y <= y; i++ ){
             if (x[i] > x[i+1]){
                 a = x[i+1];
+            }
          }
     }
 
